@@ -26,7 +26,5 @@ new_dict = {row.letter : row.code  for(index, row) in nato_csv.iterrows()}
 print(new_dict)
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 name = input("What is your name? :")
-list_nato = []
-for letter in name:
-    list_nato.append(new_dict.get(letter.upper()))
+list_nato = [new_dict.get(l.upper()) for l in name]
 print(list_nato)
